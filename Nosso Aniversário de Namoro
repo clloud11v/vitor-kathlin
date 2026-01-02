@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Otimização para WhatsApp -->
+  <meta property="og:title" content="Vitor & Kathlin — 2 anos de amor" />
+  <meta property="og:description" content="Uma surpresa feita com carinho para celebrar nossa história." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509042239860-f550ce710b93" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#8B1E3F" />
+
+  <title>Vitor & Kathlin — 2 Anos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8B1E3F;   /* vinho quente */
+      --secondary: #C44536; /* vermelho rosado */
+      --light: #FFF1E6;     /* bege rosado quente */
+      --dark: #2b1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, var(--light), #ffffff);
+      color: var(--dark);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Entrada cinematográfica da capa */
+    .hero {
+      background: linear-gradient(180deg, rgba(255,225,215,0.96), rgba(255,245,238,0.98));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.35), rgba(0,0,0,0.18));
+      opacity: 0;
+      animation: cinematicFade 2.5s ease forwards;
+    }
+
+    @keyframes cinematicFade {
+      to { opacity: 1; }
+    }
+
+    .hero .container {
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 1.8s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero.active .container {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 900px;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .hero span {
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    .divider {
+      width: 80px;
+      height: 3px;
+      background: var(--secondary);
+      margin: 30px auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      background: #fbe9ef;
+    }
+
+    footer p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      p { font-size: 1.05rem; }
+    }
+      /* Animações ao rolar a página */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.9s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+      /* Mensagem final animada */
+    .final-message .final-text {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.2s ease;
+    }
+
+    .final-message.active .final-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--primary);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1.6s ease 0.4s;
+    }
+
+    .final-message.active .signature {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Indicador de toque no mobile -->
+  <div id="tapHint" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(139,30,63,0.9);color:#fff;padding:10px 18px;border-radius:30px;font-size:0.9rem;z-index:999;opacity:0;transition:opacity .6s;">Role para descobrir 💖</div>
+
+  <!-- Hero / Capa -->
+  <section class="hero reveal">
+    <div class="container">
+      <h1>Vitor <span>&</span> Kathlin</h1>
+      <div class="divider"></div>
+      <p>2 anos de amor, escolhas diárias e uma história construída com carinho.</p>
+      <p><strong>Dia 2</strong></p>
+    </div>
+  </section>
+
+  <!-- Transição Emocional -->
+  <section class="reveal">
+    <div class="container">
+      <h2>Nossos Sentimentos</h2>
+      <div class="divider"></div>
+      <p>
+        O amor não precisa ser mostrado em imagens.
+        Ele vive nos gestos, nas palavras e no cuidado diário.
+      </p>
+      <p>
+        Cada detalhe dessa história é construído com presença,
+        respeito e vontade de permanecer.
+      </p>
+    </div>
+  </section>
+
+  <!-- História -->
+  <section class="reveal">
+    <div class="container">
+      <h2>Nossa História</h2>
+      <div class="divider"></div>
+      <p>
+        Há dois anos, o acaso se transformou em escolha.
+        Escolha de ficar, cuidar, respeitar e amar — mesmo quando não era fácil.
+      </p>
+      <p>
+        Nossa história é feita de risos, aprendizados e da coragem de crescer juntos.
+        Não é perfeita, mas é verdadeira. E é exatamente isso que a torna especial.
+      </p>
+    </div>
+  </section>
+
+  <!-- Agradecimento -->
+  <section class="reveal">
+    <div class="container">
+      <h2>Com Amor</h2>
+      <div class="divider"></div>
+      <p>
+        Obrigado por ser apoio, lar e sorriso.
+        Obrigado por caminhar ao meu lado e acreditar em nós.
+      </p>
+      <p>
+        Que este seja apenas mais um capítulo de uma história que ainda tem muito para viver.
+      </p>
+      <p><strong>Eu te amo.</strong></p>
+    </div>
+  </section>
+
+    <!-- Mensagem Final -->
+  <section class="reveal final-message">
+    <div class="container">
+      <h2>Para Sempre Nós</h2>
+      <div class="divider"></div>
+      <p class="final-text">
+        Este site é só um reflexo do que sinto por você.
+        O amor está nas escolhas diárias, nos detalhes e na vontade de continuar.
+      </p>
+      <p class="final-text">
+        Obrigado por ser minha parceira, meu apoio e meu lar.
+      </p>
+      <p class="signature">— Vitor</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Vitor & Kathlin — 2 anos juntos</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(reveal => observer.observe(reveal));
+  
+    // Dica para usuários mobile (WhatsApp)
+    const hint = document.getElementById('tapHint');
+    setTimeout(() => hint.style.opacity = 1, 1800);
+    window.addEventListener('scroll', () => hint.style.opacity = 0);
+  </script>
+
+</body>
+</html>
