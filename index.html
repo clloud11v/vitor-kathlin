@@ -166,6 +166,42 @@
       opacity: 1;
       transform: translateY(0);
     }
+      /* Leitura guiada */
+    .guided { opacity: 0; }
+    .final-message.active .guided {
+      animation: revealText 1s ease forwards;
+    }
+    .final-message.active .guided:nth-child(3) { animation-delay: .3s; }
+    .final-message.active .guided:nth-child(4) { animation-delay: .6s; }
+    .final-message.active .guided:nth-child(5) { animation-delay: .9s; }
+    .final-message.active .guided:nth-child(6) { animation-delay: 1.2s; }
+
+    @keyframes revealText {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Botão simbólico final */
+    .memory-btn {
+      margin-top: 30px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .memory-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
+
+    .memory-btn:active {
+      transform: scale(.97);
+    }
   </style>
 </head>
 <body>
@@ -178,7 +214,7 @@
     <div class="container">
       <h1>Vitor <span>&</span> Kathlin</h1>
       <div class="divider"></div>
-      <p>2 anos de amor, escolhas diárias e uma história construída com carinho, aconteceram infortúnios, mas permanecemos juntos.</p>
+      <p>2 anos de amor, escolhas diárias e uma história construída com carinho.</p>
       <p><strong>Dia 2</strong></p>
     </div>
   </section>
@@ -189,7 +225,7 @@
       <h2>Nossos Sentimentos</h2>
       <div class="divider"></div>
       <p>
-        Eu colocaria fotos, mas, O amor não precisa ser mostrado em imagens.
+        Eu colocaria fotos, mas... O amor não precisa ser mostrado em imagens.
         Ele vive nos gestos, nas palavras e no cuidado diário.
       </p>
       <p>
@@ -206,12 +242,12 @@
       <div class="divider"></div>
       <p>
         Há dois anos, o acaso se transformou em escolha.
-        Escolha de ficar, cuidar, respeitar e amar — mesmo quando não era fácil, mesmo com tudo que aconteceu.
+        Escolha de ficar, cuidar, respeitar e amar — mesmo quando não era fácil - mesmo depois de tudo que passamos.
       </p>
       <p>
         Nossa história é feita de risos, aprendizados e da coragem de crescer juntos.
         Não é perfeita, mas é verdadeira. E é exatamente isso que a torna especial.
-        Ter você ao meu lado, me faz feliz como eu sempre sonhei em ser, com você.
+        Claro que temos nossos momentos difíceis, mas juntos somos muito mais fortes.
       </p>
     </div>
   </section>
@@ -224,7 +260,7 @@
       <p>
         Obrigado por ser apoio, lar e sorriso.
         Obrigado por caminhar ao meu lado e acreditar em nós.
-        E obrigado por todas as mordidas e momentos que passamos juntos.
+        Obrigado por todas as mordidas e por todos os momentos que vivemos juntos.
       </p>
       <p>
         Que este seja apenas mais um capítulo de uma história que ainda tem muito para viver.
@@ -234,23 +270,23 @@
   </section>
 
     <!-- Mensagem Final -->
+    <!-- Mensagem Final (leitura guiada) -->
   <section class="reveal final-message">
     <div class="container">
       <h2>Para Sempre Nós</h2>
       <div class="divider"></div>
-      <p class="final-text">
-        Este site é só um reflexo do que sinto por você.
-        O amor está nas escolhas diárias, nos detalhes e na vontade de continuar.
-      </p>
-      <p class="final-text">
-        Obrigado por ser minha parceira, meu apoio e meu lar.
-      </p>
+      <p class="final-text guided">Este site é só um reflexo do que sinto por você.</p>
+      <p class="final-text guided">O amor está nas escolhas diárias, nos detalhes e na vontade de continuar.</p>
+      <p class="final-text guided">Desde que te conheci, nada mais foi comum. E desde que escolhi mudar, tudo ficou mais claro pra mim.</p>
+      <p class="final-text guided">Obrigado por ser minha parceira, meu apoio e meu lar.</p>
+      <p class="final-text guided">Eu te amo piquituxa :).</p>
+      <button class="memory-btn">Guardar esse momento</button>
       <p class="signature">— Vitor</p>
     </div>
   </section>
 
   <footer>
-    <p>Vitor & Kathlin — 2 anos juntos</p>
+    <p>Vitor & Kathlin — 2 anos de história</p>
   </footer>
 
   <script>
